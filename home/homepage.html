@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Restaurant Menu
+    </title>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <ul>
+        {% for item in menu_items %}
+        <li>
+            <h3>{{item.item_name}}</h3>
+            <p>{{item.item_description}}</p>
+            <strong>₹{{item.item_price}}</strong>
+        </li>
+    {% end for %}
+    </ul>
+</body>
+</html>

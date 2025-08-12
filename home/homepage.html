@@ -4,6 +4,7 @@
     <title>
         Restaurant Menu
     </title>
+
     <style>
         body {
             font-family: Arial,sans-serif;
@@ -49,27 +50,31 @@
             color: #27ae60;
         }
     </style>
+
 </head>
 <body>
-        <h1>{{restaurant_name}}</h1>
-        <p style="text-align:center; font-size:18px; color:#555;">
-            Welcome to {{ restaurant_name }}! Explore our delicious menu below.
-        </p>
-        <ul>
-            {% for item in menu_items %}
-                <li>
-                    <h3>{{item.item_name}}</h3>
-                    <p>{{item.item_description}}</p>
-                    <p>₹{{item.item_price}}</p>
-                </li>
-            {% endfor %}
-        </ul>
-        <div>
-            <a href="/api/about/">About Us</a>
-        </div>
+    <h1>{{restaurant_name}}</h1>
+    
+    <p style="text-align:center; font-size:18px; color:#555;">
+        Welcome to {{ restaurant_name }}! Explore our delicious menu below.
+    </p>
 
-        <div class="phone">
-            Contact Us: {{ phone_number }}
-        </div>
+    <ul>
+        {% for item in menu_items %}
+            <li>
+                <h3>{{item.item_name}}</h3>
+                <p>{{item.item_description}}</p>
+                <p>₹{{item.item_price}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div>
+        <a href="/api/about/">About Us</a>
+    </div>
+
+    <div class="phone">
+        Contact Us: {{ phone_number }}
+    </div>
 </body>
 </html>

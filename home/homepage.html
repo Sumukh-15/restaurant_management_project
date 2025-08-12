@@ -46,6 +46,9 @@
 </head>
 <body>
         <h1>{{restaurant_name}}</h1>
+        <p style="text-align:center; font-size:18px; color:#555;">
+            Welcome to {{ restaurant_name }}! Explore our delicious menu below.
+        </p>
         <ul>
             {% for item in menu_items %}
                 <li>

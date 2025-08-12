@@ -118,6 +118,7 @@ USE_I18N = True
 USE_TZ = True
 
 RESTAURANT_NAME="Ravi's Delight"
+RESTAURANT_PHONE="+91-9876543210"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -7,7 +7,7 @@ def homepage(request):
     context={
         'menu_items':menu_items,
         'restaurant_name':settings.RESTAURANT_NAME
-        'phone':settings.RESTAURANT_PHONE
+        'phone_number':settings.RESTAURANT_PHONE
     }
     return render(request,'home/homepage.html',{'menu_items':menu_items})
 

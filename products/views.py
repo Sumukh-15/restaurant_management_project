@@ -31,3 +31,15 @@ class MenuAPIView(APIView):
         items = Item.objects.all()
         serializer = MenuItemSerializer(items, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+def menu_list(request):
+    #Hardcoded menu items for now
+    menu_item = [
+        {'name':'Margherita Pizza','prize':250},
+        {'name':'Veg Burger','prize':150},
+        {'name':'Pasta Alfredo','prize':300},
+        {'name':'Chocolate Cake','prize':120},
+    ] 
+    return render(request,'menu_list.html',{'menu_items':menu_items})
+    

@@ -9,3 +9,11 @@ def homepage(request):
         'restaurant_name':settings.RESTAURANT_NAME
     }
     return render(request,'home/homepage.html',{'menu_items':menu_items})
+
+def contact_us(request):
+    contact_info = {
+        'phone': '+91-9876543210'
+        'email': 'info@restaurant.com'
+        'address': '123 Food Street, Kochi, Kerala'
+    }
+    return render(request,'contact_us.html',{'contact':contact_info})

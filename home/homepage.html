@@ -4,14 +4,51 @@
     <title>
         Restaurant Menu
     </title>
-
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+           text-align: center;
+           color: #333; 
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h3 {
+            margin: 0 0 5px 0;
+            color: #666;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body style="font-family:Arial;background-color:#fefefe;padding:20px;">
-
-        <h1 style="text-align:center;">{{restaurant_name}}</h1>
-        <ul style="list_style:none;">
+<body>
+        <h1>{{restaurant_name}}</h1>
+        <ul>
             {% for item in menu_items %}
-                <li style="padding:15px:margin-bottom:10px;">
+                <li>
                     <h3>{{item.item_name}}</h3>
                     <p>{{item.item_description}}</p>
                     <p>₹{{item.item_price}}</p>

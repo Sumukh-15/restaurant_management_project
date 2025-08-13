@@ -18,3 +18,6 @@ def contact_us(request):
         'address': '123 Food Street, Kochi, Kerala'
     }
     return render(request,'contact_us.html',{'contact':contact_info})
+
+def reservations(request):
+    return render(request,'reservations.html')

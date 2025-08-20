@@ -3,7 +3,10 @@
 {% block title %}Home - Restaurant{% endblock %}
 
 {% block content %}
-<h1 style="text-align:centre;font-family:Arial,sans-serif;margin-bottom:20px;">{{ restaurant_name}}</h1>
+<div style="text-align:centre; margin-bottom:20px;">
+    <img src="/static/images/logo.png" alt="Restaurant Logo" style="width:150px; height:auto; margin-bottom:15px;">
+    <h1 style="text-align:centre;font-family:Arial,sans-serif;margin-bottom:20px;">{{ restaurant_name}}</h1>
+</div>
 <ul style="list-style:none;padding:0;max-width:500px;margin:auto;">
     {% for item in menu_items %}
         <li style="padding:15px; margin-bottom:10px;">

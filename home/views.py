@@ -3,13 +3,18 @@ from products.models import Menu
 
 # Create your views here.
 def homepage(request):
-    menu_items = Menu.objects.all()
-    context={
-        'menu_items':menu_items,
-        'restaurant_name':settings.RESTAURANT_NAME
-        'phone_number':settings.RESTAURANT_PHONE
-    }
-    return render(request,'home/homepage.html',{'menu_items':menu_items})
+    try:
+        menu_items = Menu.objects.all()
+        context={
+            'menu_items':menu_items,
+            'restaurant_name':settings.RESTAURANT_NAME
+            'phone_number':settings.RESTAURANT_PHONE
+        }
+        return render(request,'home/homepage.html',{'menu_items':menu_items})
+    except Exception as e:
+        print("Error loading homepage:", e)
+        return render(request,"404.html",{"error_message":"Something went wrong. Please try again later"})
+        
 
 def contact_us(request):
     contact_info = {

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from products.models import Menu
+from .forms import ContactForm
 
 # Create your views here.
 def homepage(request):
@@ -26,3 +27,7 @@ def contact_us(request):
 
 def reservations(request):
     return render(request,'reservations.html')
+
+def contact_view(request):
+    form = ContactForm()
+    return render(request,'home/contact.html',{'form':form})
